@@ -23,7 +23,6 @@ def verificacao_confirma(voto: str, dict_candidatos: dict):
     if voto not in dict_candidatos and voto != 'BRANCO':
         # > Define o self._numero_voto como nulo
         voto = 'NULO'
-        print(voto)
 
     # > Retorna o voto atual para quem o chamou
     return voto

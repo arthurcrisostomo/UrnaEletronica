@@ -35,15 +35,15 @@ import os
 # > Importa sys para obter o caminho da pasta temporaria criada pelo PyInstaller
 import sys
 
-def localizar_icone():
+def localizar_pasta_icone():
     # > Define o nome do arquivo
-    nome_arquivo = 'icone-urna.ico'
+    pasta_icone = 'icone'
 
     # > Retorna o caminho da pasta onde o programa esta rodando
     caminho_local = os.path.dirname(__file__)
 
     # > Retorna o caminho da pasta temporaria _MEIPASS + nome_arquivo caso exista, se nao retorna o caminho_local + nome_arquivo
-    caminho_maipass = os.path.join(str(getattr(sys, '_MEIPASS', caminho_local)), nome_arquivo)
+    caminho_maipass = os.path.join(str(getattr(sys, '_MEIPASS', caminho_local)), pasta_icone)
 
     # > Retorna pra quem o chamou
     return caminho_maipass
@@ -70,7 +70,7 @@ class JanelaUrna(QWidget):
         self.setWindowTitle('Urna Eletronica')
 
         # > Define o icone da janela
-        self.setWindowIcon(QIcon(localizar_icone()))
+        self.setWindowIcon(QIcon(os.path.join(localizar_pasta_icone(), 'icone-urna.ico')))
 
         # > Inicializa o sistema de audio do pygame
         pygame.mixer.init()
