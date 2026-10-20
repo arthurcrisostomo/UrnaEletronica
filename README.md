@@ -4,6 +4,8 @@ Simulação didática de uma urna eletrônica feita em **Python** com **PySide6*
 
 > Projeto educacional. **Nenhum voto é armazenado**: o objetivo é apenas simular o funcionamento da urna.
 
+<img width="791" height="528" alt="image" src="https://github.com/user-attachments/assets/b0cc40fd-dfc5-42a2-a72b-b7924688413e" />
+
 ## Funcionalidades
 
 - Teclado numérico (0 a 9) com som de clique
